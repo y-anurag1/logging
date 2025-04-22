@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
       - uses: actions/checkout@v3
 
@@ -22,10 +22,3 @@ jobs:
           pip install -r requirements.txt
 
       - run: python main.py
-
-      - name: Upload Log File
-        uses: actions/upload-artifact@v3
-        with:
-          name: app-log
-          path: app.log
-          retention-days: 14
